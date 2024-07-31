@@ -1,0 +1,249 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background:#18f5be;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    text-align: center;
+}
+
+/* Header */
+h1 {
+    color: #007bff;
+    margin-top: 20px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Search Bar Styles */
+#search-container {
+    margin: 20px auto;
+    padding: 15px;
+    max-width: 600px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(139, 30, 30, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#movie-title {
+    flex: 1;
+    padding: 15px;
+    font-size: 18px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+#movie-title:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Button Styles */
+button {
+    padding: 15px 25px;
+    font-size: 18px;
+    color: #fff;
+    background: linear-gradient(to right, #007bff, #0056b3);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(to right, #0056b3, #004085);
+    transform: scale(1.05);
+}
+
+/* Movie Details Styles */
+#movie-details {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+#movie-details img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid #007bff;
+}
+
+#movie-details h2 {
+    color: #0056b3;
+    margin: 20px 0 10px;
+    font-size: 2em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+#movie-details p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Popular Movies Styles */
+#popular-movies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.movie-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 220px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.movie-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.movie-card img {
+    width: 100%;
+    height: auto;
+}
+
+.movie-card h3 {
+    font-size: 18px;
+    margin: 10px;
+    color: #333;
+}
+
+.movie-card p {
+    font-size: 16px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Rating Styles */
+.rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #f5c518;
+    margin: 10px 0;
+}
+
+.rating span {
+    display: inline-block;
+    color: #ddd; /* Light grey for empty stars */
+}
+
+.rating span.full {
+    color: #f5c518; /* Gold color for full stars */
+}
+
+.rating span.half {
+    background: linear-gradient(to right, #f5c518 50%, #ddd 50%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.rating span.empty {
+    color: #ddd; /* Color for empty stars */
+}
+
+/* Rating Text Styles */
+.rating-text {
+    font-size: 16px;
+    color: #333;
+    margin-top: 5px;
+}
+
+.rating-label {
+    font-weight: bold;
+    color: #007bff; /* Blue color for the rating label */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #search-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #movie-title {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    #popular-movies {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .movie-card {
+        width: 90%;
+        max-width: 350px;
+    }
+}
+
+/* Animation and Hover Effects */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.movie-card {
+    animation: fadeIn 0.5s ease-in;
+}
+/* Add these styles to your existing CSS */
+#back-button-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#back-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background: linear-gradient(to right, #007bff, #0056b3);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+#back-button:hover {
+    background: linear-gradient(to right, #0056b3, #004085);
+    transform: scale(1.05);
+}
+
+.movie-card {
+    cursor: pointer; /* Change cursor to pointer for clickable images */
+}
+
+#movie-details {
+    display: none; /* Hide movie details initially */
+}
+
+#popular-movies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}

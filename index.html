@@ -1,0 +1,25 @@
+<!-- HTML Structure -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search App</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS -->
+</head>
+<body>
+    <header>
+        <h1>Movie Search App</h1>
+    </header>
+    <div id="search-container">
+        <input type="text" id="movie-title" placeholder="Enter movie title">
+        <button onclick="searchMovie()">Search</button>
+    </div>
+    <div id="popular-movies"></div>
+    <div id="movie-details"></div>
+    <div id="back-button-container" style="display: none;">
+        <button id="back-button">Back to Popular Movies</button>
+    </div>
+    <script src="script.js"></script> <!-- Link to your JS -->
+</body>
+</html>
